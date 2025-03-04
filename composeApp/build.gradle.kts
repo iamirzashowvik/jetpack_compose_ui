@@ -48,6 +48,9 @@ kotlin {
 }
 
 android {
+    buildFeatures {
+        compose = true
+    }
     namespace = "org.gg.project"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
@@ -75,6 +78,9 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.material3.android)
+    implementation(libs.core.ktx)
+    implementation(libs.core.ktx)
     debugImplementation(compose.uiTooling)
 }
 
